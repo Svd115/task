@@ -141,12 +141,17 @@
 				
 				function unloading(){
 					$("#loading").css("display", "none");
+					
+					if(!$(".todo")){
+						$("#no_todo").css("visibility", "visible");
+					}
+					else{
+						$("#no_todo").css("visibility", "hidden");
+					}
 				}
 				
 				function new_task(message){
-					unloading();
 					if(message[0]){
-						
 						var $todo = $('<div />').appendTo("#todo_list_body_table");
 						$todo.attr("class", "todo");
 						$todo.attr("id", message[1]);
@@ -162,10 +167,11 @@
 					else{
 						infos("danger", "This task cannot be created !!");
 					}
+					
+					unloading();
 				}
 				
 				function update_task(message){
-					unloading();
 					if(message[0]){
 						$("#"+message[2]).text(message[1]);
 						infos("success", "Task updated with success !!")
@@ -173,10 +179,11 @@
 					else{
 						infos("danger", "This task cannot be updated !!");
 					}
+					
+					unloading();
 				}
 				
 				function delete_task(message){
-					unloading();
 					if(message[0]){
 						message[1].forEach(function(id){
 							$("#"+id).remove();
@@ -186,4 +193,6 @@
 					else{
 						infos("danger", "Task cannot be deleted !!");
 					}
+					
+					unloading();
 				}
