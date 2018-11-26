@@ -142,11 +142,12 @@
 				function unloading(){
 					$("#loading").css("display", "none");
 					
-					if($(".todo").length > 0){
+					if($(".todo").length === 0){
 						var $no_todo = $('<div />').appendTo("#todo_list_body_table");
 						$no_todo.attr("class", "no_todo");
+						$no_todo.text("There is no task.");
 					}
-					else{
+					else if($(".todo").length === 1){
 						$("#no_todo").remove();
 					}
 				}
