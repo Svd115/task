@@ -142,11 +142,11 @@
 				function unloading(){
 					$("#loading").css("display", "none");
 					
-					if(!$(".todo")){
-						$("#no_todo").css("visibility", "visible");
+					if($(".todo").length > 0){
+						$("#no_todo").css("display", "block");
 					}
 					else{
-						$("#no_todo").css("visibility", "hidden");
+						$("#no_todo").css("display", "none");
 					}
 				}
 				
