@@ -143,10 +143,11 @@
 					$("#loading").css("display", "none");
 					
 					if($(".todo").length > 0){
-						$("#no_todo").css("display", "block");
+						var $no_todo = $('<div />').appendTo("#todo_list_body_table");
+						$no_todo.attr("class", "no_todo");
 					}
 					else{
-						$("#no_todo").css("display", "none");
+						$("#no_todo").remove();
 					}
 				}
 				
