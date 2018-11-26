@@ -1,0 +1,20 @@
+{
+    "name": "task",
+    "version": "1.0.0",
+    "dependencies": {
+        "bcrypt": "^3.0.2",
+        "body-parser": "^1.18.3",
+        "cookie-session": "^2.0.0-beta.3",
+        "ejs": "^2.6.1",
+        "ent": "^2.2.0",
+        "express": "^4.16.4",
+        "pg": "^7.6.1",
+        "socket.io": "^2.1.1",
+        "sparkpost": "^2.1.3"
+    },
+    "author": "Svd115",
+    "description": "real time todo list with mysql database using node.js and socket.io",
+    "engines": {
+        "node": "10.11.0"
+    }
+}

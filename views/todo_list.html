@@ -1,0 +1,32 @@
+				<div id="loading" style="display:none"></div>
+				<div id="todo_list" class=" p-0 m-0">
+					<div class="bg-primary p-2 d-flex justify-content-between" id="todo_list_head" style="">
+						<div style="width:22px;height:22px"></div>
+						<h5 class="m-0 p-0">Real time todo list</h5>
+						<form class="m-0 p-0" id="logout" method="post" action="/">
+							<button type="submit" class="btn btn-link m-0 p-0" title="Logout" name="logout"><i class="fas fa-power-off fas-o" ></i></button>
+						</form>
+					</div>
+					
+					<div class="bloc" id="todo_list_body" style="">
+						<div id="todo_list_body_table">
+						<% if(locals.task && task.length > 0){%>
+								<% task.forEach(function(e){ %>
+							<div class="todo" id="<%= e.id %>"><%= e.task %></div>
+								<% }) %>
+						<% } else { %>
+							<div id="no_todo">There is no task.</div>
+						<% };%>
+						</div>
+					</div>
+					
+					<div class=" m-0 p-0" id="todo_list_form" >
+						<form id="task_form" class="form-inline" method="post" action="/">
+							<textarea class="col form-control" name="task" placeholder="New task..." rows="1" autofocus></textarea>
+							<input type="hidden" name="task_id" id="task_id"/>
+
+							<button type="submit" name="create" class="col-2 p-2 form-control btn btn-primary">Send</button>
+						</form>
+					</div>
+					
+				</div>

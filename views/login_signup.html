@@ -1,0 +1,51 @@
+				<div class="d-flex align-items-center" id="login">
+					<div class="mx-auto p-2 bloc" style="display:inline-block">
+						<form id="form_login"class="p-0 m-0" method="post" action="/">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Email login" autofocus>
+							</div>
+							
+							<div class="form-group">
+								<input type="password" name="psw" class="form-control" placeholder="Your password" aria-describedby="forget">
+								<button type="button" id="forget_btn" class="btn btn-link">Forgot your password ?</button>
+							</div>
+							
+							<div class="form-group">
+								<button style="width:100%" class="btn btn-info" type="submit" name="login" title="Login">Login</button>
+							</div>
+						</form>
+						
+						<form id="form_forget" action="/" method="post" style="display:none">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Your email login">
+							</div>
+							
+							<div class="form-group">
+								<button style="width:100%" class="btn btn-info" type="submit" name="forget">Send</button>
+							</div>
+						</form>
+						
+						<form id="form_signup" class="p-0 m-0" method="post" action="/" style="display:none">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Email adress" autofocus>
+							</div>
+							
+							<div class="form-group">
+								<input type="password" name="psw" class="form-control" placeholder="Your password" aria-describedby="pswHelp">
+								<small id="pswHelp" class="form-text text-muted">Minimum 8 characters with 1 uppercase, 1 lowercase and 1 number.</small>
+							</div>
+							
+							<div class="form-group">
+								<input type="password" name="confirm_psw" class="form-control" placeholder="Confirm your password">
+							</div>
+							
+							<div class="form-group">
+								<button style="width:100%" class="btn btn-info" type="submit" name="signup" title="Create your account">Signup</button>
+							</div>
+						</form>
+						
+						<button style="width:100%" class="my-1 btn btn-success" type="button" title="Create a new account" id="signup_btn"><i class="fas fa-arrow-right"></i> Signup</button>
+						
+						<button style="display:none;width:100%" class="my-1 btn btn-success" type="button" title="Login" id="login_btn"><i class="fas fa-arrow-left"></i> Login</button>
+					</div>
+				</div>

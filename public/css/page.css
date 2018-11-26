@@ -1,0 +1,37 @@
+html,body{
+	width:100%;
+	height:100%;
+	background-color:rgb(153,217,234);
+	overflow-x:hidden;
+}
+
+@media screen and (min-width: 1025px){
+	html,body{
+		padding:10px;
+	}
+}
+
+.bloc{
+	border:1px solid grey;
+	background-color:white;
+}
+
+.btn{
+	border-radius:0px;
+}
+
+#close_infos{
+	color:black;
+	position:absolute;
+	top:10px;
+	left:100%;
+	transform:translate(-200%,0);
+}
+
+i{
+	color:white;
+}
+
+#infos{
+	text-align:center;
+}
