@@ -144,7 +144,7 @@
 					
 					if($(".todo").length === 0){
 						var $no_todo = $('<div />').appendTo("#todo_list_body_table");
-						$no_todo.attr("class", "no_todo");
+						$no_todo.attr("id", "no_todo");
 						$no_todo.text("There is no task.");
 					}
 					else if($(".todo").length === 1){
