@@ -15,7 +15,7 @@
 				forget.on('return', function(data){
 					if(data[0]){
 						var content = 
-						"<p>In order to reset your password please click on this link : </p><a href='"+req.protocol+'://'+req.hostname+"/signup/"+data[1]+"/"+data[2]+"'>Reset my password</a>";
+						"<p>In order to reset your password please click on this link : </p><a href='"+req.protocol+"://"+req.hostname+"/forget/"+data[1]+"/"+data[2]+"'>Reset my password</a>";
 						
 						require('../../modules/mail.js').on(email, content, "Reset your password");
 						
