@@ -39,7 +39,7 @@
 									//message invitant user à confirmer son inscription en checkant email, envoi email puis redirect vers /
 									
 									var content = 
-									"<p>In order to validate your account please click on this link : </p><a href='"+req.protocol+"://"+req.hostname+"/signup/"+data[1]+"/"+data[2]+"'>Confirm my account</a>";
+									"<p>In order to validate your account please click on this link : </p><a href='"+req.protocol+"://"+req.hostname+"/signup/"+data[1]+"/"+data[2]+"'>Confirm my account</a><p>If the link doesn't work, please copy this : "+req.protocol+"://"+req.hostname+"/signup/"+data[1]+"/"+data[2]+"</p>";
 									
 									require('../../modules/mail.js').on(email, content, "Confirmation of your account");
 									
